@@ -12,7 +12,7 @@ type = name[1]
 type = type.lower()
 commands = []
 
-#This is equal to 'cd ~/Desktop/programs'
+#Explain: Type anything in and it will use the current directory that contain the compiler.py
 directory = input("Enter file directory(Default: current file directory)\n> ")
 try:
 	os.chdir(directory)
