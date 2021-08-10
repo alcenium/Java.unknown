@@ -13,7 +13,12 @@ type = type.lower()
 commands = []
 
 #This is equal to 'cd ~/Desktop/programs'
-os.chdir("/Users/Alcen/Desktop/programs")
+directory = input("Enter file directory(Default: current file directory)\n> ")
+try:
+	os.chdir(directory)
+except FileNotFoundError:
+	directory2 = os.getcwd()
+	os.chdir(directory2)
 
 #Code to insert different commands base on extension type
 if type == "java":
